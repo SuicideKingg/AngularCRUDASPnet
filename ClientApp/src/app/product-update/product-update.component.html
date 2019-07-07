@@ -1,0 +1,27 @@
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>Update Product</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div style="padding:15px">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="SKU" formControlName="sku">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Product Name" formControlName="productName">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Description" formControlName="description">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Supplier" formControlName="supplier">
+        </mat-form-field>
+      </div>
+    </mat-card-content>
+    <mat-card-actions style="padding:15px">
+      <button mat-raised-button color="primary">Save Product</button>
+      <button mat-raised-button color="accent" routerLink="/product-list">Go Back</button>
+    </mat-card-actions>
+  </mat-card>
+</form>
